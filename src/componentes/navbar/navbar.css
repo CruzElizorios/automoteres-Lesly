@@ -1,0 +1,29 @@
+.navbar{
+    background-color: saddlebrown;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    color: beige;
+}
+.navbar .logo{
+    color: bisque;
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.navbar .menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 10px;
+}
+.navbar .menu .menu-link{
+    color:antiquewhite;
+    font-family:cursive;
+    font-size: 1.15rem;
+}
+.navbar .menu .menu-link:hover{
+    color: springgreen;
+    transition: 0.75s;
+}
+
