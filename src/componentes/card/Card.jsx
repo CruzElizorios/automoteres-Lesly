@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Card.css"
 
 export const Card = ({product}) =>{
@@ -9,7 +10,7 @@ export const Card = ({product}) =>{
         <span className="card-subtitulo">Año: {product.year} Kms: {product.mileage}</span>
         <spam className="card-subtitulo">Transmisión: {product.transmission}</spam>
         <span className="card-subtitulo" style={{paddingBottom: 1 + 'rem'}} > Tipo de Combustible: {product.fuel_type}</span>
-        <button>ver más</button>
+        <Link className="card-ver" to={`/detalles/${product.id}`}>ver más </Link>
     </div>
     )
 }

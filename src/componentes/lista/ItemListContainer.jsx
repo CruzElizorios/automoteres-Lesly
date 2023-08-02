@@ -1,21 +1,15 @@
 import { useState, useEffect } from "react";
-import data from "../../data/products-car.json"
 import { Card } from "../card/Card";
+import { pedirDatos } from "../../service/pedirDatos";
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
 
-    const pedirProductos = () => {
-        return new Promise((resolve, reject) => {
-            resolve(data)
-        })
-    }
-
     useEffect(() => {
-        pedirProductos()
-        .then((res) => {
-            setProductos(res);
+        pedirDatos()
+            .then((res) => {
+                setProductos(res);
         })
     }, [])
     

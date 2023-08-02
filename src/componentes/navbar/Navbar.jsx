@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom"
 import "./navbar.css"
 
 export const Navbar = (pedo) =>{
     return (
         <nav className="navbar">
-            <a className="logo" href="#"><h1>Lesly Motors</h1></a>
+            <Link className="logo" to="/"><h1>Lesly Motors</h1></Link>
             <ul className="menu">
-                <li><a className="menu-link" href="#">Inicio</a></li>
-                <li><a className="menu-link" href="#">Nosotros</a></li>
-                <li><a className="menu-link" href="#">Productos</a></li>
-                <li><a className="menu-link" href="#">Contacto</a></li>
+                <li><Link className="menu-link" to="/">Inicio</Link></li>
+                <li><Link className="menu-link" to="/detalles">Nosotros</Link></li>
+                <li><Link className="menu-link" to="#">Productos</Link></li>
+                <li><Link className="menu-link" to="#">Contacto</Link></li>
             </ul>
         </nav>
     )
